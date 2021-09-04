@@ -44,12 +44,14 @@
     <OutputType>Library</OutputType>
     <AssemblyName>OpenXMLEditor</AssemblyName>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.OpenXMLEditor</RootNamespace>
     <ProjectGuid>{232D3565-0EAE-480E-B2DE-CE58A7F660E3}</ProjectGuid>
-    <ApplicationIcon>Package.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -87,149 +89,56 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AboutForm.Designer.cs">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewExternalRelationshipDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewExternalRelationshipDialog.Designer.cs">
-      <DependentUpon>NewExternalRelationshipDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DocumentPackage.cs" />
-    <Compile Include="DocumentPart.cs" />
-    <Compile Include="DocumentRelationship.cs" />
-    <Compile Include="NewFolderDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewFolderDialog.Designer.cs">
-      <DependentUpon>NewFolderDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewInternalRelationshipDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewInternalRelationshipDialog.Designer.cs">
-      <DependentUpon>NewInternalRelationshipDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewPartDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewPartDialog.Designer.cs">
-      <DependentUpon>NewPartDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KnownPackageInfo.cs" />
-    <Compile Include="PackageEditorFactory.cs" />
-    <Compile Include="PackageEditorPane.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Guids.cs" />
-    <Compile Include="PackageEditorPane.Designer.cs">
-      <DependentUpon>PackageEditorPane.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PartEditorFactory.cs" />
-    <Compile Include="PartNameEditBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="PartNameEditBox.Designer.cs">
-      <DependentUpon>PartNameEditBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PartViewHelper.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="VSPackage.Designer.cs">
-      <DependentUpon>VSPackage.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="VsPkg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutForm.resx">
-      <DependentUpon>AboutForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewExternalRelationshipDialog.resx">
-      <DependentUpon>NewExternalRelationshipDialog.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewFolderDialog.resx">
-      <DependentUpon>NewFolderDialog.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewInternalRelationshipDialog.resx">
-      <DependentUpon>NewInternalRelationshipDialog.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewPartDialog.resx">
-      <DependentUpon>NewPartDialog.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PackageEditorPane.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>PackageEditorPane.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PartNameEditBox.resx">
-      <DependentUpon>PartNameEditBox.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="VSPackage.resx">
-      <MergeWithCTO>true</MergeWithCTO>
-      <ManifestResourceName>VSPackage</ManifestResourceName>
-      <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Shared\eula.1033.txt">
+      <Link>eula.1033.txt</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\Package.ico">
+      <Link>Package.ico</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\ReleaseNotes.txt">
+      <Link>ReleaseNotes.txt</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\Templates\default.gcsx">
+      <Link>Templates\default.gcsx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\Templates\default.glox">
+      <Link>Templates\default.glox</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\Templates\default.gqsx">
+      <Link>Templates\default.gqsx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\Shared\Templates\OpenXMLEditor.vsdir">
+      <Link>Templates\OpenXMLEditor.vsdir</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Key.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="eula.1033.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Package.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ReleaseNotes.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Templates\default.gcsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\default.glox">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\default.gqsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Templates\OpenXMLEditor.vsdir">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -243,6 +152,7 @@
       <Version>11.0.4</Version>
     </PackageReference>
   </ItemGroup>
+  <Import Project="..\OpenXMLEditor.Shared\OpenXMLEditor.Shared.projitems" Label="Shared" />
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>
   </PropertyGroup>
